@@ -1,0 +1,845 @@
+#searchpanel, #searchpanelhome, #searchpanelhome2
+{
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  background: #f6f6f8;
+  padding-bottom: 13px;
+  padding-top: 4px;
+  position: relative;
+  top: -18px;
+  height: auto;
+  border-bottom: 1px solid #ebebeb;
+
+}
+
+#searchpanelhome, #searchpanelhome2
+{
+  background: url("https://www.tutorhunt.com/images/search-home-back.jpg");
+  height:550px;
+    position: relative;
+  top: -19px;
+
+}
+
+ #searchpanelhome2
+ {
+	 height: auto;
+ }
+#searchpanelhome2 h1, #searchpanelhome2 p, #searchpanelhome2 strong
+{
+		 color: #fff;
+}
+
+#searchpanelhome2 #nearbys
+{
+	 color: #444;
+}
+
+ #searchpanelhome2 #location a
+ {
+	 background: #777;
+ }
+
+ #searchpanelhome2 #location a
+ {
+ color: #fff;
+ }
+
+#searchpanelcontent
+{
+  width: 990px;
+  margin: 0 auto;
+  overflow: auto;
+  padding-top: 20px;
+}
+
+#searchpanelhome #searchpanelcontent h1
+{
+	 color: #fff;
+  font-size: 37px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 35px;
+}
+
+
+#searchpanelhome #searchpanelcontent p
+{
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 19px;
+  margin-bottom: 34px;
+}
+
+#profileresultscontent, #profileresultsblock
+{
+  background: #fff !important;
+  
+}
+
+.previewpanelcontainer
+{
+  width: 440px;
+  height: 190px;
+  float: left;
+  border: 2px solid #ebebeb;
+  padding: 15px;
+  margin-top: 14px;
+  color: #444;
+  	border-radius: 4px;
+	position: relative;
+}
+
+.previewpanelimg
+{
+  float: left;
+  margin-right: 20px;
+}
+
+.previewimage
+{
+  width: 80px;
+  height: 80px;  
+}
+
+.previewpanel
+{
+  margin-left: 15px;
+  
+}
+
+.previewpanelcontainer:hover
+{
+  border: 2px solid #aaa;
+  
+}
+
+.previewpanel .previewpanelname
+{
+  color: #666;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+ #profileresultscontent .previewpanelcontainer:nth-of-type(2n+1)
+{
+  margin-right: 20px;
+}
+
+.previewbutton
+{
+   position: absolute;
+   top: 175px;
+}
+
+.previewbuttonlesson
+{
+	top: 280px;
+	left: 330px;
+}
+.previewpanelsummary
+{
+  margin-top: 11px;
+  color: #888;
+  font-size: 13px;
+}
+
+.previewcomments
+{
+  color: #666;
+  clear: both;
+  line-height: 1.7;
+  font-size: 14px;
+  padding-top: 5px;
+}
+
+.panelsearchheaderitem
+{
+  width: 156px;
+  float: left;
+  height: 41px;
+  line-height: 3.3;
+  text-align: center;
+  background: #ebebeb;
+    border-top: 4px #ebebeb solid;
+  position: relative;
+  top: 1px;
+   background: #fff;
+  border-top: 4px #7aa3e6 solid;
+  border-left: 1px solid #ebebeb;
+}
+
+#panelsearchheader
+{
+	float: left; 
+	margin-top: 2px;
+}
+
+.panelsearchheaderitem a, .panelsearchheaderitem a:visited
+{
+ color: #666666;
+ font-weight:bold;
+ text-transform: uppercase;
+ text-decoration: none;
+ 
+ 
+}
+
+.panelsearchheaderitemsel
+{
+   background: #ebebeb;
+   
+  border-top: 4px #ebebeb solid;
+}
+
+#quicksearchpanel, #mainsearchpanel
+{
+	clear: both;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 11px;
+	background: #fff;
+	overflow: auto;
+	border: 1px solid #ebebeb;
+}
+
+.quicksearchbut
+{
+	width: 129px !important;
+	float: right  !important;
+	  top: -4px  !important;
+	  position: relative;
+}
+
+.quicksearchbutcon
+{
+	clear: none !important;
+	margin-top: 5px;
+
+}
+
+
+
+#quicksearchpanel #category, #quicksearchpanel #type, #quicksearchpanel #level
+{
+	width: 23.35%;
+	margin-right: 2.2%;
+	float: left;
+	display: block;
+	padding: 8px;
+	margin-bottom: 11px;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+	background: url("https://www.tutorhunt.com/images/selection-arrow.png") no-repeat right;
+}
+
+
+#quicksearchpanel #subject
+{
+	width: 23.35%;
+	margin-right: 2.2%;
+	float: left;
+	display: block;
+	padding: 9px;
+	margin-bottom: 11px;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
+
+
+#quicksearchpanel #postcode
+{
+	width: 183px;
+	margin-right: 20px;
+	float: left;
+	display: block;
+	padding: 9px;
+		height: 21px;
+	margin-bottom: 11px;
+	border: 1px solid #dcdcdc;
+    background: url("https://www.tutorhunt.com/images/search-pin.png") no-repeat right;
+    padding-right: 20px;
+	
+}
+
+#mainsearchpanel #category, #mainsearchpanel #type, #mainsearchpanel #level, #mainsearchpanel #postcode
+{
+	width: 300px !important;
+	margin-right: 2.2%;
+	float: left;
+	display: block;
+	padding: 9px;
+	margin-bottom: 11px;
+	margin-top: 10px;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+	background: url("https://www.tutorhunt.com/images/selection-arrow.png") no-repeat right;
+	
+}
+
+#mainsearchpanel #subject
+{
+	width: 280px !important;
+	margin-right: 2.2%;
+	float: left;
+	display: block;
+	padding: 9px;
+	margin-bottom: 11px;
+	margin-top: 10px;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+}
+
+#mainsearchpanel #postcode
+{
+	width: 280px !important;
+    background: url("https://www.tutorhunt.com/images/search-pin.png") no-repeat right;
+}
+
+
+
+#mainsearchpanel  .quicksearchbutcon
+{
+	clear: none !important;
+	float: right !important;
+	margin-right: 2.2%;
+	
+	
+}
+#mainsearchpanel .quicksearchbut
+{
+    float: left ;
+		width: 122.1% !important;
+		height: 18px;
+	margin-left: 1.6%;
+	position: static !important;
+		margin-top:6px;
+		
+	
+}
+#mainsearchpanelfooter
+{
+  width: 970px;
+  background: #fff;
+  height: 25px;
+  padding: 10px;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.reducesearchitemwidth
+{
+
+   width: 17% ;
+}
+
+#sortbycon
+{
+	clear: both;
+	float: right;
+	line-height: 3.1;
+	margin-top: 20px;
+}
+
+#sortbycon  select
+{
+	 appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+	background: #fff url("https://www.tutorhunt.com/images/selection-arrow.png") no-repeat right;
+	
+}
+
+#tutorfilters
+{
+  margin: 0;
+}
+
+#amount, #rating
+{
+	background: #fff !important;
+	padding: 0  !important;
+	margin-bottom: 9px  !important;
+    color: #7aa3e6;
+	font-weight: bold;
+width: 196px;
+margin: 0;
+}
+
+.priceslider ,.ratingslider
+{
+	width: 200px  !important;
+}
+
+#slider-price, #slider-rating
+{
+	width: 196px;
+	margin: 0;
+}
+
+.tabreduce
+{
+	margin: 0;
+	position: relative;
+	left: -20px;
+}
+
+.degreebutton
+{
+	margin-top: 3px;
+}
+
+
+.previewonlinehours
+{
+	position:absolute;
+	top:-0px;
+	left:-4px;
+	z-index: 1000;
+
+}
+
+.previewrate
+{
+	color: #666666;
+	position: absolute;
+	top: 183px;
+	left: 148px;
+	font-weight: bold;
+	font-size: 14px;
+	padding-left: 26px;
+	background: url("https://www.tutorhunt.com/images/icon-coins.png") no-repeat left;
+}
+
+
+
+/*TABLET***************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+@media screen and (max-width: 1014px) and (min-width: 721px)
+{
+	
+#searchpanelcontent
+{
+  width: 99%;
+  box-sizing: border-box;
+}
+
+#searchpanel, #searchpanelhome, #searchpanelhome2
+{
+
+  position: relative;
+  top: -2px;
+}
+	
+#profileresultscontent
+{
+  padding-left: 1% ;
+  box-sizing: border-box;
+  
+}	
+
+.previewcomments
+{
+  padding-top: 10px;
+}
+.previewpanelcontainer
+{
+  width: 44%;
+  height: 220px;
+}	
+
+#panelsearchheader
+{
+ 
+	margin-top:3px;
+}
+
+
+ #profileresultscontent .previewpanelcontainer:nth-of-type(2n+1)
+{
+  margin-right: 2%;
+}
+
+
+#quicksearchpanel #category,#quicksearchpanel #subject, #quicksearchpanel #type, #quicksearchpanel #level
+{
+	width: 24%;
+	margin-right: 1%;
+	float: left;
+	display: block;
+	margin-bottom: 11px;
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+	background: url("https://www.tutorhunt.com/images/selection-arrow.png") no-repeat right;
+}
+
+#quicksearchpanel #postcode
+{
+	width: 20.6% ;
+
+	margin-right: 1%;
+	float: left;
+	height: 21px;
+	display: block;
+	margin-bottom: 11px;
+	border: 1px solid #dcdcdc;
+    background: url("https://www.tutorhunt.com/images/search-pin.png") no-repeat right;
+    padding-right: 20px;
+	
+}
+
+
+#mainsearchpanel #category,#mainsearchpanel #subject, #mainsearchpanel #type, #mainsearchpanel #level, #mainsearchpanel #postcode
+{
+	width: 36% !important;
+
+}
+
+#mainsearchpanel #subject, #mainsearchpanel #postcode
+{
+	width: 24% !important;
+
+}
+
+#mainsearchpanel #level
+{
+	width: 29% !important;
+}
+
+
+
+#mainsearchpanelfooter
+{
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px !important;
+}  
+  
+
+#mainsearchpanel  .quicksearchbutcon
+{
+    top: 5px  !important;
+	left: -11px;
+	position: relative;
+	width: 17%;
+
+}
+
+
+.previewbuttonlesson
+{
+	top: 10px !important;
+	left: auto;
+	right: 1.7%;
+}
+
+.quicksearchfilteritem 
+{
+	width: 22.5%;
+	margin-right: 0 !important;
+	float: left;
+}
+
+#priceslider, #ratingslider
+{
+	width: 40%;
+}
+
+#amount, #rating
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+	float: left;
+}
+
+#slider-price , #slider-rating 
+{
+		float: left;
+		clear: left;
+		margin-top: 4px;
+	width: 80%;
+
+	
+}	
+
+.tabreduce
+{
+	margin-right: 0 !important;
+	margin-left: 3% !important;
+	width: 20%;
+	font-size: 11px;
+}
+
+.quicksearchbut
+
+{
+  height: 20px !important;
+  float: right !important;
+  padding-top: 10px !important;
+  margin-bottom: 0 !important;
+  top: -4px  !important;
+  margin-right: 3%;
+  margin-top: 0 !important;
+  width: 82% !important;
+  text-align: center !important;
+  position: relative !important;
+
+}
+
+.previewbutton
+{
+   position: absolute;
+   top: 205px;
+}
+
+.previewrate
+{
+	top: 213px;
+	left: 148px;
+}
+
+#mainsearchpanelfooter
+{
+  height: auto;
+}  
+
+
+	
+}
+
+
+	
+/*MOBILE***************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+/**********************************************************************************************/
+
+
+
+@media screen and (max-width: 720px) and (min-width: 180px)
+{
+	
+#searchpanel, #searchpanelhome, #searchpanelhome2
+{
+
+  position: relative;
+  top: 0;
+  
+}
+
+#searchpanelhome2 h1
+{
+  padding: 2%;
+}
+
+#searchpanelhome2 p
+{
+  padding: 2%;
+  font-size: 90%;
+}
+
+#searchpanelhome
+{
+	height: auto;
+
+}
+
+
+#panelsearchheader
+{
+ 
+	clear: both;
+	margin: 0;
+	width: 100%;
+}
+
+
+#searchpanelhome #searchpanelcontent h1
+{
+  font-size: 140%;
+  margin-top: 4%;
+}
+#searchpanelhome #searchpanelcontent p
+{
+  font-size: 100%;
+  margin-top: 3%;
+  margin-bottom: 7%;
+}
+	
+.panelsearchheaderitem
+{
+  line-height: 2.5;
+}
+  
+#searchpanelcontent
+{
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  padding-top: 5px;
+
+}
+	
+#profileresultscontent
+{
+  padding-left: 1%;
+  padding-right: 1%;
+  box-sizing: border-box;
+
+  
+}	
+
+#quicksearchpanel #postcode
+{
+	margin: 0 !important;
+	margin-bottom: 5px !important;
+	height: 40px;
+}
+.previewpanelcontainer
+{
+  width: 100%;
+  height: auto;
+    box-sizing: border-box;
+}	
+
+#mainsearchpanelfooter
+{
+  width: 100%; 
+  box-sizing: border-box;
+  height: auto;
+  font-size: 90%;
+  padding-left: 1%;
+  padding-right: 1%;  
+}  
+
+.quicksearchfilteritem
+{
+	width: 40% !important;
+	float: left;
+	margin: 1% !important;
+	padding: 1% !important;
+}
+
+#priceslider, #ratingslider
+{
+	width: 30% !important;
+}
+
+#mainsearchpanel #category,#mainsearchpanel #subject, #mainsearchpanel #type, #mainsearchpanel #level, #mainsearchpanel #postcode
+{
+  width: 99% !important;
+  box-sizing: border-box;
+	
+}
+
+#mainsearchpanel #subject
+{
+
+	margin-left: 0;
+}
+
+
+	
+
+#mainsearchpanel #postcode
+{
+	height: 40px;
+}
+
+#amount, #rating
+{
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+	float: left;
+}
+
+#slider-price , #slider-rating 
+{
+		float: left;
+		clear: left;
+		margin-top: 4px;
+	width: 70% !important;
+
+	
+}	
+
+.tabreduce
+{
+		margin: 1% !important;
+  padding-top: 2% !important;
+  width: 99%  !important;
+  box-sizing: border-box  !important;
+  font-size: 12px;
+}
+.teacherbutton, .degreebutton
+{
+	position: relative;
+	top: -2%;
+	left: 1%;
+		margin: 0 !important;
+	padding: 0 !important;
+	margin-left: 2%;
+	margin-top: 1%;
+
+}
+
+.previewbutton
+{
+   position: static;
+  margin-top: 15px;
+}
+
+.previewrate
+{
+	position: relative;
+    top: -25px;
+	left: 0;
+    float: right;
+	margin-bottom: -25px;
+}
+
+#sortbycon  select
+{
+	background: none;
+	background: #fff;
+}	
+
+.panelsearchheaderitem
+{
+	width: 50%;
+	box-sizing:border-box;
+	
+}
+.quicksearchbutcon
+{
+	position: static !important;
+	top: 0 !important;
+	left:0 !important;
+
+	margin-right: 0% !important;
+}
+.previewonlinehours
+{
+	position:absolute;
+	left: 87%;
+	z-index: 1000;
+
+}
+	
+
+}

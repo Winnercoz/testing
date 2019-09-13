@@ -1,0 +1,69 @@
+.total_images
+{
+  margin: 0px auto;
+  font-style: normal;
+
+}
+
+.total_images .eachs
+{
+  position: absolute
+}
+
+#link
+{
+  top: 0px;
+  left: 40px;
+}
+
+
+.eachs img.images
+{
+  width: 20px;
+  height: 6px;
+  opacity: 1;
+  display: none
+}
+
+.total_images .eachs a.menu:hover
+{
+  color: #fff;-moz-border-radius: 5px;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+}
+
+.eachs
+{
+  width:105px; 
+  text-align:left; 
+
+  color: #eee; 
+}
+
+.eachs div
+{
+  list-style: none;
+  position: absolute;
+  width: 110px;
+  left: 10px;
+  top: 25px; 
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  display: none;
+}
+
+.eachs div ul{ margin:12px; margin-top: 1px; padding:0px 0px 0px 0px; list-style-type:none;}
+.eachs div li{ width:160px;}
+.eachs div li a{ text-align: left; margin-left: 0px; font-size:12px; width:160px;padding-top:4px; vertical-align:bottom;  display:block;   text-decoration: none;}
+.eachs div li a:hover
+{
+  text-decoration: none;
+  color:#FF0000
+}
+
+.eachs div a
+{
+  text-decoration: none;
+  color: #fff;
+}

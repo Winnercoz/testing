@@ -1,0 +1,547 @@
+
+
+#confirmationbox .btn , .popupbox .btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+
+
+#confirmationbox .btn:focus, .popupbox .btn:focus,
+#confirmationbox .btn:active:focus, .popupbox .btn:active:focus,
+#confirmationbox .btn.active:focus, .popupbox .btn.active:focus,
+#confirmationbox .btn.focus, .popupbox .btn.focus,
+#confirmationbox .btn:active.focus, .popupbox .btn:active.focus,
+#confirmationbox .btn.active.focus , .popupbox .btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+#confirmationbox .btn:hover, .popupbox .btn:hover,
+#confirmationbox .btn:focus, .popupbox .btn:focus,
+#confirmationbox .btn.focus, .popupbox .btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+
+
+
+#confirmationbox .btn:active, .popupbox .btn:active,
+#confirmationbox .btn.active, .popupbox .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+
+#confirmationbox .btn.disabled, .popupbox .btn.disabled,
+#confirmationbox .btn[disabled], .popupbox .btn[disabled],
+#confirmationbox fieldset[disabled] .btn , .popupbox fieldset[disabled] .btn{
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  opacity: .65;
+}
+
+
+#confirmationbox  a.btn.disabled,  .popupbox  a.btn.disabled,
+#confirmationbox fieldset[disabled] a.btn , .popupbox fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+#confirmationbox .btn-default , .popupbox .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+#confirmationbox .btn-default:focus, .popupbox .btn-default:focus,
+#confirmationbox .btn-default.focus, .popupbox .btn-default.focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+#confirmationbox .btn-default:hover , .popupbox .btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+#confirmationbox .btn-default:active, .popupbox .btn-default:active,
+#confirmationbox .btn-default.active, .popupbox .btn-default.active,
+#confirmationbox .open > .dropdown-toggle .btn-default , .popupbox .open > .dropdown-toggle .btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+#confirmationbox .btn-default:active:hover, .popupbox .btn-default:active:hover,
+#confirmationbox .btn-default.active:hover, .popupbox .btn-default.active:hover,
+#confirmationbox .open > .dropdown-toggle .btn-default:hover, .popupbox .open > .dropdown-toggle .btn-default:hover,
+#confirmationbox .btn-default:active:focus, .popupbox .btn-default:active:focus,
+#confirmationbox .btn-default.active:focus, .popupbox .btn-default.active:focus,
+#confirmationbox .open > .dropdown-toggle .btn-default:focus, .popupbox .open > .dropdown-toggle .btn-default:focus,
+#confirmationbox .btn-default:active.focus, .popupbox .btn-default:active.focus,
+#confirmationbox .btn-default.active.focus, .popupbox .btn-default.active.focus,
+#confirmationbox .open > .dropdown-toggle .btn-default.focus , .popupbox .open > .dropdown-toggle .btn-default.focus {
+  color: #333;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+#confirmationbox .btn-default:active, .popupbox .btn-default:active,
+#confirmationbox .btn-default.active, .popupbox .btn-default.active,
+#confirmationbox .open > .dropdown-toggle .btn-default , .popupbox .open > .dropdown-toggle .btn-default {
+  background-image: none;
+}
+#confirmationbox .btn-default.disabled:hover, .popupbox .btn-default.disabled:hover,
+#confirmationbox .btn-default[disabled]:hover, .popupbox .btn-default[disabled]:hover,
+#confirmationbox fieldset[disabled]  .btn-default:hover, .popupbox fieldset[disabled]  .btn-default:hover,
+#confirmationbox .btn-default.disabled:focus, .popupbox .btn-default.disabled:focus,
+#confirmationbox .btn-default[disabled]:focus, .popupbox .btn-default[disabled]:focus,
+#confirmationbox fieldset[disabled] .btn-default:focus, .popupbox fieldset[disabled] .btn-default:focus,
+#confirmationbox .btn-default.disabled.focus, .popupbox .btn-default.disabled.focus,
+#confirmationbox .btn-default[disabled].focus, .popupbox .btn-default[disabled].focus,
+#confirmationbox fieldset[disabled]  .btn-default.focus , .popupbox fieldset[disabled]  .btn-default.focus {
+  background-color: #fff;
+  border-color: #ccc;
+}
+#confirmationbox .btn-default .badge , .popupbox .btn-default .badge {
+  color: #fff;
+  background-color: #333;
+}
+
+
+
+
+#confirmationbox .btn-primary , .popupbox .btn-primary {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+#confirmationbox .btn-primary:focus, .popupbox .btn-primary:focus,
+#confirmationbox .btn-primary.focus , .popupbox .btn-primary.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+#confirmationbox .btn-primary:hover , .popupbox .btn-primary:hover{
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+#confirmationbox .btn-primary:active, .popupbox .btn-primary:active,
+#confirmationbox .btn-primary.active, .popupbox .btn-primary.active,
+#confirmationbox .open > .dropdown-toggle .btn-primary , .popupbox .open > .dropdown-toggle .btn-primary{
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+#confirmationbox .btn-primary:active:hover,.popupbox .btn-primary:active:hover,
+#confirmationbox .btn-primary.active:hover,.popupbox .btn-primary.active:hover,
+#confirmationbox .open > .dropdown-toggle .btn-primary:hover, .popupbox .open > .dropdown-toggle .btn-primary:hover,
+#confirmationbox .btn-primary:active:focus, .popupbox .btn-primary:active:focus,
+#confirmationbox .btn-primary.active:focus, .popupbox .btn-primary.active:focus,
+#confirmationbox.open > .dropdown-toggle .btn-primary:focus, .popupbox.open > .dropdown-toggle .btn-primary:focus,
+#confirmationbox .btn-primary:active.focus, .popupbox .btn-primary:active.focus,
+#confirmationbox .btn-primary.active.focus, .popupbox .btn-primary.active.focus,
+#confirmationbox.open > .dropdown-toggle .btn-primary.focus , .popupbox.open > .dropdown-toggle .btn-primary.focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+#confirmationbox .btn-primary:active, .popupbox .btn-primary:active,
+#confirmationbox .btn-primary.active, .popupbox .btn-primary.active,
+#confirmationbox .open > .dropdown-toggle .btn-primary , .popupbox .open > .dropdown-toggle .btn-primary {
+  background-image: none;
+}
+#confirmationbox .btn-primary.disabled:hover, .popupbox .btn-primary.disabled:hover,
+#confirmationbox .btn-primary[disabled]:hover, .popupbox .btn-primary[disabled]:hover,
+#confirmationbox fieldset[disabled]  .btn-primary:hover, .popupbox fieldset[disabled]  .btn-primary:hover,
+#confirmationbox .btn-primary.disabled:focus, .popupbox .btn-primary.disabled:focus,
+#confirmationbox .btn-primary[disabled]:focus, .popupbox .btn-primary[disabled]:focus,
+#confirmationbox fieldset[disabled]  .btn-primary:focus, .popupbox fieldset[disabled]  .btn-primary:focus,
+#confirmationbox .btn-primary.disabled.focus, .popupbox .btn-primary.disabled.focus,
+#confirmationbox .btn-primary[disabled].focus, .popupbox .btn-primary[disabled].focus,
+#confirmationbox fieldset[disabled]  .btn-primary.focus , .popupbox fieldset[disabled]  .btn-primary.focus{
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+#confirmationbox .btn-primary .badge , .popupbox .btn-primary .badge{
+  color: #337ab7;
+  background-color: #fff;
+}
+
+
+
+
+
+#confirmationbox .fade , .popupbox .fade{
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+       -o-transition: opacity .15s linear;
+          transition: opacity .15s linear;
+}
+
+
+#confirmationbox .fade.in , .popupbox .fade.in{
+  opacity: 1;
+}
+
+
+#confirmationbox .collapse , .popupbox .collapse{
+  display: none;
+}
+
+#confirmationbox .collapse.in , .popupbox .collapse.in {
+  display: block;
+}
+
+
+#confirmationbox tr.collapse.in , .popupbox tr.collapse.in {
+  display: table-row;
+}
+#confirmationbox tbody.collapse.in , .popupbox tbody.collapse.in {
+  display: table-row-group;
+}
+#confirmationbox .collapsing , .popupbox .collapsing{
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+       -o-transition-property: height, visibility;
+          transition-property: height, visibility;
+}
+
+
+
+
+/* top right [X] close button */
+
+
+
+
+#confirmationbox .modal-dialog .closemodal , 
+.popupbox .modal-dialog .closemodal , 
+.closefile{
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+#confirmationbox .modal-dialog .closemodal:hover, .popupbox .modal-dialog .closemodal:hover,
+#confirmationbox .modal-dialog .closemodal:focus , .popupbox .modal-dialog .closemodal:focus,
+.closefile:hover,
+.closefile:focus
+{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+#confirmationbox .modal-dialog button.closemodal , 
+.popupbox .modal-dialog button.closemodal,
+button.closefile
+{
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+
+.fileblock .closefile
+{
+	position:relative;
+	top:-4px;
+}
+
+
+
+
+#confirmationbox .modal-open , .popupbox .modal-open {
+  overflow: hidden;
+}
+#confirmationbox .modal , .popupbox .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+#confirmationbox .modal.fade .modal-dialog , .popupbox .modal.fade .modal-dialog{
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+       -o-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+#confirmationbox .modal.in .modal-dialog , .popupbox .modal.in .modal-dialog{
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+#confirmationbox .modal-open .modal , .popupbox .modal-open .modal{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#confirmationbox .modal-dialog , .popupbox .modal-dialog {
+  position: relative;
+  width: auto;
+
+}
+#confirmationbox .modal-content , .popupbox .modal-content{
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+#confirmationbox .modal-backdrop , .popupbox .modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+}
+#confirmationbox .modal-backdrop.fade , .popupbox .modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+#confirmationbox .modal-backdrop.in , .popupbox .modal-backdrop.in{
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+#confirmationbox .modal-header ,  .popupbox .modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#confirmationbox .modal-header .close , .popupbox .modal-header .close {
+  margin-top: -2px;
+}
+#confirmationbox .modal-title , .popupbox .modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+#confirmationbox .modal-body , .popupbox .modal-body{
+  position: relative;
+  padding: 15px;
+}
+#confirmationbox .modal-footer , .popupbox .modal-footer{
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+#confirmationbox .modal-footer .btn + .btn , .popupbox .modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+#confirmationbox .modal-footer .btn-group .btn + .btn , .popupbox .modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+#confirmationbox .modal-footer .btn-block + .btn-block , .popupbox .modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+#confirmationbox .modal-scrollbar-measure , .popupbox .modal-scrollbar-measure{
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+
+@media (min-width: 768px) {
+ #confirmationbox  .modal-dialog ,  .popupbox  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+ #confirmationbox  .modal-content ,  .popupbox  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+ #confirmationbox  .modal-sm ,  .popupbox  .modal-sm {
+    width: 300px;
+  }
+
+  
+  
+ .popupbox  .modal-dialog {
+    width: 400px;
+  }
+
+ .popupbox  #scheduleeditform .modal-dialog {
+    width: 600px;  
+ }
+ 
+  #bookingsform1 .modal-dialog {
+    width: 600px;  
+	background: #fff;
+ }
+ 
+   #bookingsform2 .modal-dialog {
+    width: 600px;  
+	background: #fff;
+ }
+  
+  .popupbox   #deleteconfirm .modal-dialog {
+    width: 500px;
+  } 
+ 
+  #referenceform .modal-dialog {
+    width: 800px;
+  }
+
+
+#bookingsinvoice .modal-dialog {
+    width: 700px;
+  } 
+  
+  
+  
+  
+  #subjecteditform .modal-dialog {
+    width: 600px;  
+	background: #fff;
+ }
+ 
+  
+  
+}
+@media (min-width: 992px) {
+ #confirmationbox  .modal-lg ,  .popupbox  .modal-lg {
+    width: 900px;
+  }
+}
+
+
+
+
+
+
+
+
+#confirmationbox .modal-header:before, .popupbox .modal-header:before,
+#confirmationbox .modal-header:after, .popupbox .modal-header:after,
+#confirmationbox .modal-footer:before, .popupbox .modal-footer:before,
+#confirmationbox .modal-footer:after , .popupbox .modal-footer:after {
+  display: table;
+  content: " ";
+}
+
+
+
+#confirmationbox .modal-header:after, .popupbox .modal-header:after,
+#confirmationbox .modal-footer:after, .popupbox .modal-footer:after {
+  clear: both;
+}
+
+
+/* Important part */
+.popupbox .modal-dialog{
+    overflow-y: initial !important
+}
+
+.popupbox .modal-body{
+    height:190px;
+}
+
+.popupbox #deleteconfirm .modal-body{
+    height:100px;
+}
+
+
+#subjecteditform .modal-body{
+    height:auto;
+}
+
+#deletesubjectform .modal-body{
+    height:150px;
+}
+
+#bookingsonlinerates .modal-body{
+    height:250px;
+}
+
+
+#referenceform .modal-body{
+    height:400px;
+}
+
+#bookingsinvoice .modal-body{
+    height:500px;
+}
+
+
+
+#deleteconfirm .deletecontent
+{
+	font-size:120%;
+}
+#deleteconfirm .deletebtn
+{
+	margin-top:20px;
+}
+
+
+#confirmationbox .modal-dialog {
+	z-index:2147483647;
+}
+
+
+.ui-autocomplete {z-index:2147483647;};
+
+
+

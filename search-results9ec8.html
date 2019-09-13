@@ -1,0 +1,585 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+  
+
+<head>
+    <title>Search Results</title>
+    <meta name="description" content="The Tutor Hunt network helps both tutors and students find each other. Search by level, subject and location, create your own tutor or student profile for free.">
+  
+    
+	  <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#7aa3e6">
+	<link rel="manifest" href="https://www.tutorhunt.com/manifest.json">	
+    <link rel="icon" type="image/png" href="https://www.tutorhunt.com/fav-icon.png">
+	<link rel="apple-touch-icon" href="https://www.tutorhunt.com/apple-touch-icon-144x144-precomposed.png">
+	<link rel="shortcut icon" href="https://www.tutorhunt.com/apple-touch-icon-144x144-precomposed.png">
+
+
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/jquery-ui.css">
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/menu.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/tutorhunt12.css?ver=071" media="screen" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/dropdown.css" media="screen" />
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/rating.css">
+	<link type="text/css" rel="stylesheet" href="https://www.tutorhunt.com/css/jquery.mmenu.css" />
+	
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/confirmation/confirmation-box.css?ver=005">
+		 
+	 
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/fill-list03.js?ver=002"></script>
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery-3.3.1.min.js" ></script>
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/cookiefy.js"></script>
+    <script type="text/javascript" src="https://www.tutorhunt.com/js/main07.js?ver=006"></script>
+
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery-ui.min.js"></script>
+	<script src="https://www.tutorhunt.com/js/jquery.barrating.js"></script>
+	<script src="https://www.tutorhunt.com/js/rating.js"></script>
+
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-box.js?ver=003"></script>
+    <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-msg.js?ver=002"></script>
+	
+	
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery.mmenu.min.js"></script>
+<link rel="canonical" href="https://www.tutorhunt.com/search-results.asp?amountlower=" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80125758-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/previewpanels.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/partn.css" media="screen" />	
+
+  <link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/confirmation/confirmation-box.css">
+  <link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/confirmation/confirmation-switch-search.css">	
+  
+  
+  <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-box.js"></script>
+  <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-msg.js"></script>
+  <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-switch.js"></script>
+	
+    <meta name="robots" content="noindex, nofollow" />
+	<style>
+	  .quickmembermsg
+	  {
+	    border: 3px #698c14 solid;
+		padding: 10px;
+		background: #8eb926;
+		color: #fff;
+		font-size: 14px;
+      }
+	  
+	  .quickmembermsg p
+	  {	  
+	    margin-top: 3px;
+		margin-bottom: 7px;
+		font-weight: bold;
+		    text-shadow: 1px 1px 0px #698c14;  
+
+	  }
+	  </style>
+	  
+
+ <style type="text/css">
+    .modal-backdrop {
+  background: transparent;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  color: #fff;
+  background:#a9d622;
+}
+  </style>
+ 
+ 
+<script type='text/javascript'>//<![CDATA[
+function hidepanel() {
+    $("#partnerpanel").slideToggle();
+	var request = new XMLHttpRequest();
+    request.open("https://www.tutorhunt.com/GET", "https://www.tutorhunt.com/partner/clear.asp", true);
+    request.send(null);
+}
+
+
+	  $( function()
+	  {
+        if  (getCookie2("profileratedialog") != "inactive")
+        {
+          document.cookie = "profileratedialog=active; secure;"; 
+          $( "#profileratedialog" ).fadeIn(1400, function() {
+    
+          });
+        } 
+      } );
+
+
+$(window).load(function(){
+$("#chkteacher").bootstrapSwitch();
+$('#chkteacher').bootstrapSwitch('onText', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+$('#chkteacher').bootstrapSwitch('offText', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+$('#chkteacher').bootstrapSwitch('labelText', 'No');
+
+$('#chkteacher').bootstrapSwitch('offColor', 'default');
+$('#chkteacher').bootstrapSwitch('onColor', 'primary');
+
+
+$("#chkDegree").bootstrapSwitch();
+$('#chkDegree').bootstrapSwitch('onText', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+$('#chkDegree').bootstrapSwitch('offText', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+$('#chkDegree').bootstrapSwitch('labelText', 'No');
+
+$('#chkDegree').bootstrapSwitch('offColor', 'default');
+$('#chkDegree').bootstrapSwitch('onColor', 'primary');
+
+
+
+
+$('#chkteacher').on('switchChange.bootstrapSwitch', function (e, data) {
+		
+		
+	if(data)
+	{
+		$('#chkteacher').bootstrapSwitch('labelText', 'Yes');
+	}
+	else
+	{
+		$('#chkteacher').bootstrapSwitch('labelText', 'No');
+	}
+});	
+
+$('#chkDegree').on('switchChange.bootstrapSwitch', function (e, data) {
+		
+		
+	if(data)
+	{
+		$('#chkDegree').bootstrapSwitch('labelText', 'Yes');
+	}
+	else
+	{
+		$('#chkDegree').bootstrapSwitch('labelText', 'No');
+	}	
+
+});
+
+});//]]> 
+
+
+
+
+  
+</script>
+	  
+  </head>
+
+  <body>
+
+    <div id="headerblock">
+      <div id="logo"><a href="https://www.tutorhunt.com/">
+
+<img src="https://www.tutorhunt.com/images/logo.png" alt="Tutor Hunt" title="Tutor Hunt - Discover New Learning Possibilities"> 
+
+</a></div>
+
+<div id="headertel">
+&nbsp;</div> 
+ 
+		<div class="header mobyes">
+				<a href="#my-mobile-menu" id="mobmenubutton" title="Menu"><span></span>
+      <span></span>
+      <span></span></a>
+			</div>
+
+<div class="mobyes mobregister"><a href="https://www.tutorhunt.com/signup.asp"><img src="https://www.tutorhunt.com/images/button-register.png" alt="Sign Up" title="Sign Up" /></a></div><div style="float: right; margin-top: 20px;" class="mobno"><div id="toploginout" style="position: relative; width: 175px; left: -5px;"><a href="https://www.tutorhunt.com/" id="toplogin"><img src="https://www.tutorhunt.com/images/button-login.png" style="border: 0" alt="login"></a><div class="messagepop pop"> <div class="closebut"><a class="close" href="https://www.tutorhunt.com/"><img src="https://www.tutorhunt.com/images/button-login-close.png" alt="login"></a></div> <form method="post" id="loginform" name="loginform" action="https://www.tutorhunt.com/process-login.asp"> <p><input type="text" style="width: 223px; padding: 10px;" name="username" id="username" class="forminputtext" value="" placeholder="username"></p> <p><input type="password" style="width: 223px; padding: 10px;" name="password" placeholder="password" id="password" class="forminputtext" ></p> <p><a onclick="document.getElementById('loginform').submit();" class="btn green small" style="color: #fff; text-decoration: none;">Login</a></p> </form></div></div> 
+
+<script>
+$('#loginform').keydown(function(e) {
+    if (e.keyCode != 13)
+        return;
+    $(this).submit();
+}); 
+</script>
+
+
+</div>
+
+ <div id="socialmenubuttons"><a id="buttontwitter" href="http://twitter.com/tutorhunt/"><span class="buttext">Tutor Hunt on twitter</span></a> <a id="buttonfacebook" href="http://www.facebook.com/tutorhunt/"><span class="buttext">Tutor Hunt on facebook</span></a> </div><div id="toplinks"><span class="mobno"><img src="https://www.tutorhunt.com/images/icon-home-phone.png" style="position: relative; top: 2px;"> <a href="tel:+442031510012">0203 151 0012</a> &nbsp;&nbsp;&nbsp; <a href="https://www.tutorhunt.com/about.asp">About</a> &nbsp;&nbsp;&nbsp;</span><a href="https://www.tutorhunt.com/login.asp">Login</a> </div>
+    </div>
+
+    <div id="menublock">
+      
+
+
+	<div id="menublockmain">
+	
+     <nav id="menu" >
+	 
+	  
+	  
+	 
+	
+			<ul>
+			
+   <li class="mobyes homebutton menuitem"></li>
+			
+<li class="homebutton menuitem"><a href="https://www.tutorhunt.com/"><span id="memicon-home"></span>Home</a></li> <li class="otherbutton menuitem" ><a href="https://www.tutorhunt.com/tutor-search.asp" ><span id="memicon-foundme"></span>Search</a></li>
+	   <li class="otherbutton menuitem mobyes"><a href="https://www.tutorhunt.com/login.asp" ><span id="memicon-login"></span>
+Log In </a></li>
+	  	    
+ 	  <li class="otherbutton menuitemex menu-students"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth120"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+For Students </a></span>
+
+	 <div class="menu-students-sub">
+	
+     <ul >
+<span id="formattutormenu1"><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Services</a>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/tutor-search.asp">Find a Tutor</a></li>		 <li class="submenuitem"><a href="https://www.tutorhunt.com/about.asp">How Our Service Works</a></li>		 <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects.asp">Browse All Subjects</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/resource/">Academic Resources</a></li>	 	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/questions/">Ask an Academic Question</a></li>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/locations/county/">Tutors By County</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/locations/london.asp">Tutors in London</a></li> 	 	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/online-tuition/">Online Tuition</a></li>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/lessons/">Group Lessons</a></li>		 </span> 
+
+       <li class="submenuitem" ><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="formattutormenu2title">
+Subjects Categories </a></span>
+   <ul >
+ 
+<span id="formattutormenu2"> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/academic/">Academic</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/languages/">Languages</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/musical-instruments/">Musical Instruments</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/arts/">Arts</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/health-fitness/">Health and Fitness</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/it/">IT</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/professional/">Professional</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/lifestyle/">Lifestyle</a></li>	 </span>	    
+     </ul>
+	
+ </li>
+
+
+	
+    <li class="submenuitem"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="formattutormenu3title">
+Popular Subjects </a></span>
+
+	<ul >
+
+
+	
+<span id="formattutormenu3">
+<li class="submenuitem"><a href="https://www.tutorhunt.com/maths.asp">Maths</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/english.asp">English</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/biology.asp">Biology</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/chemistry.asp">Chemistry</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/physics.asp">Physics</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/general-science.asp">General Science</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/french.asp">French</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/german.asp">German</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/spanish.asp">Spanish</a></li>
+</span>
+</ul>
+</li>
+</ul>
+</div>
+ </li> 	 
+	  <li class="otherbutton menuitemex menu-tutors"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth120"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+For Tutors </a></span>
+
+     	 <div class="menu-tutors-sub">
+
+  <ul ><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Services</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/tutor-search.asp?type=student">Search for Students</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/jobs/locations/county/">Tuition Jobs By County</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/jobs/locations/london.asp">Tuition Jobs in London</a></li>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/jobs/">Tuition Jobs By Subject</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/signup.asp?type=tutor">Register</a></li>	 </ul> 
+
+</div>
+
+  <li class="otherbutton menuitemex menu-tutors" ><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth111"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+Resources </a></span>
+
+     	 <div class="menu-tutors-sub">
+
+ <ul ><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Resources</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/blog/">Blog</a><li class="submenuitem"><a href="https://www.tutorhunt.com/research/">Research</a><li class="submenuitem"><a href="https://www.tutorhunt.com/foundation/">Foundation</a><li class="submenuitem"><a href="https://www.tutorhunt.com/resource/">Tutor Resources</a><li class="submenuitem"><a href="https://www.tutorhunt.com/questions/">Academic Questions</a><li class="submenuitem" ><a href="https://www.tutorhunt.com/schools/directory/primary/">Primary School Guide</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/schools/directory/secondary/">Secondary School Guide</a></li></ul> 
+
+</div>
+       
+
+<li class="otherbutton menuitem menu-contact"><a class="menuwidth100" href="https://www.tutorhunt.com/contact.asp"><span id="memicon-mail"></span>Contact us</a></li> <li class="otherbutton menuitem mobyes"><a href="https://www.tutorhunt.com/signup.asp" > <span id="memicon-register"></span>Register</a></li>
+	  </ul>
+	  
+      <div id="signupmenubutton" class="mobno">
+<a href="https://www.tutorhunt.com/signup.asp" class="btn green small nobuttonshadow"  style="font-size: 14px; font-weight: normal; padding-left: 15px; padding-right: 15px;">Register</a>
+</div>
+
+			</nav>
+    </div>
+    </div>
+	
+	<div id="searchpanelhome2">
+	<div id="searchpanelcontent">
+   
+	
+
+    <p id="location"><a href="https://www.tutorhunt.com/">Tutor Hunt</a><a href="https://www.tutorhunt.com/tutor-search.asp">Search</a></p>
+    <h1>Your Search Results</h1>
+
+<p style="margin-bottom: 5px;"><img src="https://www.tutorhunt.com/images/arrow-green-right.png" style="position: relative; top: 1px; margin: 0" alt="* " />&nbsp;Your search results for a <strong>&nbsp;</strong> located near <strong></strong>.</p><span style="color: #fff;">You must <a style="color: #fff;" href="https://www.tutorhunt.com/signup.asp">sign up</a> to contact a member.</span>
+	
+		     <div id="thmessage" >
+	   <img src="https://www.tutorhunt.com/images/fair-price.png" alt="Fair Price Promise" id="thfairprice">
+	   <div id="thmessageheader">Tuition at a Fair Price</div>
+	   <div id="thmessageline1">Notice how our tutors' rates are <strong>cheaper than elsewhere</strong>?</div>
+	   <div id="thmessageline2">Over 95% of our tutors are on <strong>zero commission</strong>, and their rates go directly to them.</div>
+	 </div>
+	
+      <script type="text/javascript">
+ $(function(){
+
+    $("#subject").autocomplete( { source: "/members/auto-complete-source.asp?source=subject" , delay: 0 ,minLength: 0});
+
+ });
+</script>
+
+
+
+
+
+
+<form id="panelsearchtutor" method="get" action="https://www.tutorhunt.com/search-results.asp">
+<div id="panelsearchheader">
+		 <div id="onetoonetab" class="panelsearchheaderitem   "><a href="javascript:searchboxshow('quicksearch' , 'onetoone'); getresults();"><img style="position: relative; top: 2px;left: -5px;" src="https://www.tutorhunt.com/images/icon-open-book.png" alt="">One to One</a></div>
+		 <div id="onlinetab"  style="border-right: 1px solid #eee;" class="panelsearchheaderitem  panelsearchheaderitemsel "><a href="javascript:searchboxshow('quicksearch' , 'online'); getresults();"><img style="position: relative; top: 2px;left: -5px;" src="https://www.tutorhunt.com/images/icon-computer.png" alt="">Online</a></div>
+</div>
+<div id="quicksearchpanel">
+  <input type="hidden" name="tuitiontype" id="tuitiontype" value="">
+
+ 
+	    
+		    
+		    <input type="hidden" name="subjectid" value="" />
+		    <input type="hidden" name="searchsource" value="" />				
+				
+				
+			 <input class="forminputtextpad" type="text" name="subject" id="subject" maxlength="100" value="" placeholder="Enter Subject" style="width:46%;" />
+			 
+
+      <select  name="type" id="type" class="formdropdownpad" onchange="ShowTutorFilter();getresults();" style="">
+		<option value="tutor">Tutor</option><option value="student">Tutoring Job</option>
+      </select>
+
+   	  <select  name="level" id="level" class="formdropdownpad" style="margin-right: 0; " onchange="getresults()">
+		<option value="all" selected="selected" >All Levels</option><option value="primary">Primary</option><option value="ks3">KS3</option><option value="gcse">GCSE</option><option value="a-level">A-Level</option><option value="degree">Degree</option><option value="adult-learner">Adult Learner</option>
+      </select>
+
+
+		
+			
+      <input class="forminputtextpad"  type="text" name="postcode" id="postcode" maxlength="14" value="" placeholder="postcode" style="" />
+	  
+
+
+
+
+  <script>
+  
+  function getresults()
+{
+	var amountlower = document.getElementById("amountlower").value;
+	var amounthiger = document.getElementById("amounthiger").value;
+	
+	var ratingvale = document.getElementById("ratingvale").value;
+	var chkteacher = document.getElementById("chkteacher").checked;
+	var chkDegree = document.getElementById("chkDegree").checked;
+	var sortby = document.getElementById("sortby").value;
+	
+	//var category = document.getElementById("category").value;
+	var type = document.getElementById("type").value;
+	
+	
+	var tuitiontype = document.getElementById("tuitiontype").value;
+	var subject = document.getElementById("subject").value;
+	var level = document.getElementById("level").value;
+	var postcode = document.getElementById("postcode").value;
+	
+	
+	
+	var ichkDegree = 0;
+	var ichkteacher = 0;
+
+	if (chkDegree == true)
+	{
+		ichkDegree = 1;
+	}
+
+	
+	if (chkteacher == true)
+	{
+		ichkteacher = 1;
+	}
+	
+	
+	
+	
+	var page = "";
+	page = "https://www.tutorhunt.com/search-results-get.asp?amountlower=" + amountlower + "&amounthiger=" + amounthiger + "&ratingvale=" + ratingvale+ "&chkteacher=" + ichkteacher+ "&chkDegree=" + ichkDegree+ "&sortby=" + sortby+ "&tuitiontype=" + tuitiontype+ "&subjectid=" + subject + "&subject=" + subject+ "&level=" + level+ "&postcode=" + postcode+ "&sourcepage=searchresults" + "&searchsource=filter&filter=1&type=" + type
+	
+
+	//alert(page);
+	get_searchresults("resultblockcontainer",page)
+	window.history.pushState("Search Results", "Search", "https://www.tutorhunt.com/search-results.asp?amountlower=" + amountlower + "&amounthiger=" + amounthiger + "&ratingvale=" + ratingvale+ "&chkteacher=" + ichkteacher+ "&chkDegree=" + ichkDegree+ "&sortby=" + sortby+ "&tuitiontype=" + tuitiontype+ "&subjectid=" + subject + "&subject=" + subject+ "&level=" + level+ "&postcode=" + postcode+ "&sourcepage=searchresults" + "&searchsource=filter&filter=1&type=" + type);
+	
+}
+	
+
+
+
+	
+  $(function() {
+    $( "#slider-price" ).slider({
+      range: true,
+      min: 0,
+      max: 100,
+      values: [0,100],
+      slide: function( event, ui ) 
+	  {
+		var suffix = "";
+        if(ui.values[1] >= 100)
+		{
+		suffix = "+";
+		}
+		$("#amount").val("Price: "+ String.fromCharCode(163) + ui.values[ 0 ] + " - " + String.fromCharCode(163) + ui.values[ 1 ] + suffix );
+		$("#amountlower").val(ui.values[0]);
+		$("#amounthiger").val(ui.values[1]);
+      },
+		stop: function(event, ui) {
+			getresults();
+		}
+    });
+    $( "#amount" ).val("Price: "+ String.fromCharCode(163) + $( "#slider-price" ).slider( "values", 0 ) +
+      " - " + String.fromCharCode(163) + $( "#slider-price" ).slider( "values", 1 ) +  "+" );
+  });
+  
+
+	
+  $(function() {
+    $( "#slider-rating" ).slider({
+      range: "max",
+      min: 1,
+      max: 5,
+      value:1,
+
+      slide: function( event, ui ) 
+	  {
+		var suffix = "";
+		
+		if(ui.value == 1)
+		{
+		$("#rating").val("Rating: All");
+		}
+		else
+		{
+		$("#rating").val("Rating: "+ ui.value + "* +");
+		}
+		$("#ratingvale").val(ui.value);
+      },
+		stop: function(event, ui) {
+			getresults();
+		}
+    });
+    //$( "#rating" ).val("Rating: "+ $( "#slider-rating" ).slider( "values", 0 ) + "* +" );
+	$( "#rating" ).val("Rating: All");
+  });
+  
+  
+  
+  </script>
+  	
+	<input type="hidden" id="amountlower" value="0" />
+	<input type="hidden" id="amounthiger" value="100" />
+	<input type="hidden" id="ratingvale" value="1" />
+	
+	
+
+<div id="panelsearchfilter">
+	
+<div id="tutorfilters" style="display:none;">
+	<div class="quicksearchfilteritem" style="margin-right: 28px;">
+			<div class="priceslider">  
+					<input type="text" id="amount" readonly />
+			</div>
+			<div id="slider-price"></div>
+	</div>	
+	
+
+	<div class="quicksearchfilteritem" style="margin-right: 56px;">
+			<div class="ratingslider">  
+					<input type="text" id="rating" readonly />
+			</div>
+			<div id="slider-rating"></div>
+	</div>	
+	
+	<div class="quicksearchfilteritem tabreduce" style="margin-top: 19px; ">
+						
+						
+						
+						<div class="teacherbutton">
+							 <input id="chkteacher" value = "1" data-size="mini" name="chkteacher" type="checkbox" onchange="getresults()"  >
+							Only <span class="tabno">Show </span> Teachers
+							</div>
+							<div class="degreebutton tabno">
+							<input id="chkDegree" value = "1" data-size="mini"  name="chkDegree" type="checkbox" onchange="getresults()" >
+							Only Degree Tutors
+							</div>
+							</div>	
+							
+</div>	
+
+<div style="float:right; clear: left; " class="quicksearchbutcon">
+<a onclick="validatesearch(document.getElementById('panelsearchtutor'))" class="btn green small quicksearchbut" style="margin-right: 2.5%; "  ><img src="https://www.tutorhunt.com/images/quick-search-icon.png" alt="" style="position: relative; top: 2px; "> Search</a>
+
+</div>
+
+							
+						
+	
+	
+
+
+</div></div></form>
+
+<div id="sortbycon">
+							<div style="float: left; margin-right: 20px; color: #fff;">Sort By</div>
+						  <div style="float: right;">
+								<select style="width:170px;"  name="sortby"  onchange="getresults()"  class="forminputtext" id="sortby">
+										<option value="rank" selected="selected" >Tutor Hunt Rank</option><option value="distance">Distance</option><option value="lastlogin">Last Login Date</option><option value="registereddate">Registered Date</option>
+								</select>
+								</div>
+							</div>
+
+
+</div>
+</div>
+
+
+
+
+ <div id="maincontent" style="margin-top: 0; padding-top: 0;">
+<div id="resultblockcontainer" >
+
+
+
+ <p class="alert" style="position: relative; ">You did not enter a complete postcode so distances below are only approximates.</p><div id="maincontent"><p class="alert" style="margin-top: 50px;">Please enter a postcode on the above search box.</p><div class="lowlight" style="margin-top: 21px;">Why not let other Tutor Hunt users find you? Sign up to our free service so others can search for you &nbsp; <img src="https://www.tutorhunt.com/images/arrow-green-right.png" alt="" style="position:relative; top: 2px;">&nbsp;&nbsp;<a href="https://www.tutorhunt.com/signup.asp">Continue</a> </div></div
+</div>
+	
+
+
+</div></div></div>
+	<div id="footerblock">
+      <div id="footercontent">
+<div id="footertext">&copy; <strong>2005-2019 <a href="https://www.tutorhunt.com/"> Tutor Hunt</a>  - All Rights Reserved</strong><br /><br />
+<a rel="nofollow" href="https://www.tutorhunt.com/privacy-policy.asp">Privacy Policy</a> | <a rel="nofollow" href="https://www.tutorhunt.com/copyright.asp">Copyright</a> | <a rel="nofollow" href="https://www.tutorhunt.com/tos.asp">Terms of Service</a><div id="footerloadtime">loaded in 0.070 seconds </div></div>
+
+
+
+<div id="footersocial"><a href="http://twitter.com/tutorhunt/"><img src="https://www.tutorhunt.com/images/footer-twitter-icon.png" alt="twitter"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.facebook.com/tutorhunt/"><img src="https://www.tutorhunt.com/images/footer-facebook-icon.png" alt="facebook"></a></div> 
+</div>
+
+    </div>
+	
+    </div>
+	
+	
+  </body>
+
+</html>
+

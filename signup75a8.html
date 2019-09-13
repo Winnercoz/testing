@@ -1,0 +1,552 @@
+	<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Tutor Hunt - Register as a Tutor or Student</title>
+    <style type="text/css">
+    dl {
+		font:normal 12px/15px Arial;
+	    position: relative;
+	    width: 350px;
+	}
+	dt {
+	    clear: both;
+	    float:left;
+	    width: 130px;
+	    padding: 4px 0 2px 0;
+	    text-align: left;
+	}
+	dd {
+	    float: left;
+	    width: 200px;
+	    margin: 0 0 8px 0;
+	    padding-left: 6px;
+	}
+
+
+	/* The hint to Hide and Show */
+	.hint {
+	   	display: none;
+	    position: absolute;
+	    right: -250px;
+	    width: 200px;
+	    margin-top: -4px;
+	    border: 1px solid #c93;
+	    padding: 10px 12px;
+	    /* to fix IE6, I can't just declare a background-color,
+	    I must do a bg image, too!  So I'm duplicating the pointer.gif
+	    image, and positioning it so that it doesn't show up
+	    within the box */
+	}
+
+	/* The pointer image is hadded by using another span */
+	.hint .hint-pointer {
+	    position: absolute;
+	    left: -10px;
+	    top: 5px;
+	    width: 10px;
+	    height: 19px;
+}
+</style>
+    <meta name="description" content="The Tutor Hunt network helps both tutors and students find each other. Search by level, subject and location, create your own tutor or student profile for free.">
+  
+    
+	  <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#7aa3e6">
+	<link rel="manifest" href="https://www.tutorhunt.com/manifest.json">	
+    <link rel="icon" type="image/png" href="https://www.tutorhunt.com/fav-icon.png">
+	<link rel="apple-touch-icon" href="https://www.tutorhunt.com/apple-touch-icon-144x144-precomposed.png">
+	<link rel="shortcut icon" href="https://www.tutorhunt.com/apple-touch-icon-144x144-precomposed.png">
+
+
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/jquery-ui.css">
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/menu.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/tutorhunt12.css?ver=071" media="screen" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/dropdown.css" media="screen" />
+	<link rel="stylesheet" href="https://www.tutorhunt.com/css/rating.css">
+	<link type="text/css" rel="stylesheet" href="https://www.tutorhunt.com/css/jquery.mmenu.css" />
+	
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/confirmation/confirmation-box.css?ver=005">
+		 
+	 
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/fill-list03.js?ver=002"></script>
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery-3.3.1.min.js" ></script>
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/cookiefy.js"></script>
+    <script type="text/javascript" src="https://www.tutorhunt.com/js/main07.js?ver=006"></script>
+
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery-ui.min.js"></script>
+	<script src="https://www.tutorhunt.com/js/jquery.barrating.js"></script>
+	<script src="https://www.tutorhunt.com/js/rating.js"></script>
+
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-box.js?ver=003"></script>
+    <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-msg.js?ver=002"></script>
+	
+	
+	
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/jquery.mmenu.min.js"></script>
+<link rel="canonical" href="https://www.tutorhunt.com/signup.asp?type=tutor" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80125758-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+	
+	<link rel="stylesheet" type="text/css" href="https://www.tutorhunt.com/css/confirmation/confirmation-box.css">
+	<script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-box.js"></script>
+    <script type="text/javascript" src="https://www.tutorhunt.com/js/confirmation/confirmation-msg.js"></script>
+
+      <script type="text/javascript">
+ 	  <!--
+
+	//set by Ajax to be true or false
+	//var gValidUser;
+
+ 	  function validate(signupform)
+ 	  {
+	    verifyuser();
+	  }
+
+
+
+ 	  function validate_2(pValidUser, pValidEmail)
+ 	  {
+
+         formelements = (document.getElementById("signupform").elements);
+         for (var i = 0; i < formelements.length; i++) 
+         {
+           if (formelements[i].getAttribute('id') != null) 
+             document.getElementById(formelements[i].getAttribute('id')).className = document.getElementById(formelements[i].getAttribute('id')).className.replace(" inerr", "");
+         }
+       
+ 	    var validusernamechars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-._"
+ 	    var error_list = false
+ 	    var errors = ""
+         var count,onechar;
+ 	    validusername = true;
+
+	     var signupform = document.getElementById('signupform');
+
+	    if (pValidUser == "false")
+		{
+ 	      		error_list = true
+ 	      		errors = errors + "-> " + signupform.newusername.value + " is not available. Please choose another username <br>"
+		  document.getElementById("newusername").className = document.getElementById("newusername").className + " inerr";				
+
+		}
+	    if (pValidEmail == "false")
+		{
+ 	      		error_list = true
+ 	      		errors = errors + "-> " + signupform.email.value + " is associated with another account. Please choose another email <br>"
+		  document.getElementById("email").className = document.getElementById("email").className + " inerr";
+		}		
+
+
+ 	    if (signupform.accounttype.value == "none")
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Please select an account type <br>"
+		  document.getElementById("accounttype").className = document.getElementById("accounttype").className + " inerr"; 
+ 	    }
+		
+
+ 	    if (signupform.newusername.value.length < 5)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Username is too short (please choose a username between 5-15 chars.) <br>"
+		  document.getElementById("newusername").className = document.getElementById("newusername").className + " inerr"; 		  
+ 	    }
+		
+ 	    for (count = 0; count < signupform.newusername.value.length ; count ++)
+ 	    {
+ 	      onechar = signupform.newusername.value.substring(count,count+1)
+           if (validusernamechars.indexOf(onechar) == -1)
+           {
+             validusername = false;
+           }
+
+ 	    }
+		
+         if (validusername == false)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Username can only contain letters and numbers <br>"
+		  document.getElementById("newusername").className = document.getElementById("newusername").className + " inerr"; 			  
+ 	    }
+
+ 	    if (signupform.newusername.value.length > 15)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Username is too long (please choose a username between 5-15 chars.) <br>"
+		  document.getElementById("newusername").className = document.getElementById("newusername").className + " inerr"; 			  
+ 	    }
+ 	    if (signupform.newpassword.value != signupform.password2.value)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Your passwords do not match, please type them again <br>"
+		  document.getElementById("newpassword").className = document.getElementById("newpassword").className + " inerr"; 	
+		  document.getElementById("password2").className = document.getElementById("password2").className + " inerr"; 			  
+ 	    }
+ 	    if (signupform.newpassword.value.length < 5)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Your password is too short (please choose a password between 5-20 chars.) <br>"
+		  document.getElementById("newpassword").className = document.getElementById("newpassword").className + " inerr"; 	
+		  document.getElementById("password2").className = document.getElementById("password2").className + " inerr"; 				  
+ 	    }
+ 	    if (signupform.newpassword.value.length > 20)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Your password is too long (please choose a password between 5-20 chars.) <br>"
+		  document.getElementById("newpassword").className = document.getElementById("newpassword").className + " inerr"; 	
+		  document.getElementById("password2").className = document.getElementById("password2").className + " inerr"; 			  
+ 	    }
+
+ 	    if (signupform.email.value.length < 8 || signupform.email.value.indexOf("@") == -1 || signupform.email.value.indexOf(".") == -1)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> Please enter a valid email address <br>"
+		  document.getElementById("email").className = document.getElementById("email").className + " inerr"; 	
+	  
+ 	    }
+		
+		
+ 	    if (document.getElementById("tos").checked==false)
+ 	    {
+ 	      error_list = true
+ 	      errors = errors + "-> You must agree to our Terms of Service and Privacy Policy <br>"
+		  document.getElementById("tos").className = document.getElementById("tos").className + " inerr"; 			  
+ 	    }			
+		
+
+ 	    if (error_list == false)
+ 	    {  
+			signupform.submit();
+		}
+ 	    else
+		{
+		
+		//alert()
+		
+		//example anon function
+		//var anon = function() {$(window).load(function(){
+		//};
+		showmsg('Please check form. ' , "Sorry there was a problem with the form data, the following error(s) occured; <br><br>" + errors , 'Close' , '',null);
+
+		}
+ 	      
+
+ 	  }
+
+         var xmlhttp
+         var xmlhttp2		 
+
+         function verifyuser()
+         {
+		   var usernameresponse;
+		   var emailresponse;
+		   var emailchecked = false;
+		   var usernamechecked = false;
+			xmlhttp=GetXmlHttpObject();
+			xmlhttp2=GetXmlHttpObject();			
+			if (xmlhttp==null)
+			{
+				alert ("Your browser does not support AJAX!");
+				return;
+			}
+			var signupform = document.getElementById('signupform');
+		    var pusername = signupform.newusername.value;
+            var pemail = signupform.email.value;
+			
+            var url="https://www.tutorhunt.com/verify-user.asp?username="+ pusername;
+            var url2="https://www.tutorhunt.com/verify-email.asp?email=" + pemail;			
+
+            xmlhttp.onreadystatechange=function()
+			{
+			    
+				if (xmlhttp.readyState==4 )
+    			{
+				    usernamechecked = true;
+					usernameresponse = xmlhttp.responseText;
+					if (emailchecked)
+					validate_2(usernameresponse, emailresponse);					
+				}
+			}
+			
+            xmlhttp2.onreadystatechange=function()
+			{
+				if (xmlhttp2.readyState==4 )
+    			{
+					emailchecked = true;
+					emailresponse = xmlhttp2.responseText;
+					if (usernamechecked)
+					  validate_2(usernameresponse, emailresponse);
+						
+				}
+			}			
+           	
+
+			
+            xmlhttp.open("https://www.tutorhunt.com/GET",url,true);
+            xmlhttp2.open("https://www.tutorhunt.com/GET",url2,true);			
+            xmlhttp.send(null);
+            xmlhttp2.send(null);			
+        }
+
+
+                    function GetXmlHttpObject()
+                    {
+						if (window.XMLHttpRequest)
+						{
+							// code for IE7+, Firefox, Chrome, Opera, Safari
+							return new XMLHttpRequest();
+						}
+						if (window.ActiveXObject)
+						{
+							// code for IE6, IE5
+							return new ActiveXObject("Microsoft.XMLHTTP");
+						}
+						return null;
+                    }
+					
+					
+				
+
+
+ 	  -->
+    </script>
+  </head>
+
+  <body>
+
+    <div id="headerblock">
+      <div id="logo"><a href="https://www.tutorhunt.com/">
+
+<img src="https://www.tutorhunt.com/images/logo.png" alt="Tutor Hunt" title="Tutor Hunt - Discover New Learning Possibilities"> 
+
+</a></div>
+
+<div id="headertel">
+&nbsp;</div> 
+ 
+		<div class="header mobyes">
+				<a href="#my-mobile-menu" id="mobmenubutton" title="Menu"><span></span>
+      <span></span>
+      <span></span></a>
+			</div>
+
+<div class="mobyes mobregister"><a href="https://www.tutorhunt.com/signup.asp"><img src="https://www.tutorhunt.com/images/button-register.png" alt="Sign Up" title="Sign Up" /></a></div><div style="float: right; margin-top: 20px;" class="mobno"><div id="toploginout" style="position: relative; width: 175px; left: -5px;"><a href="https://www.tutorhunt.com/" id="toplogin"><img src="https://www.tutorhunt.com/images/button-login.png" style="border: 0" alt="login"></a><div class="messagepop pop"> <div class="closebut"><a class="close" href="https://www.tutorhunt.com/"><img src="https://www.tutorhunt.com/images/button-login-close.png" alt="login"></a></div> <form method="post" id="loginform" name="loginform" action="https://www.tutorhunt.com/process-login.asp"> <p><input type="text" style="width: 223px; padding: 10px;" name="username" id="username" class="forminputtext" value="" placeholder="username"></p> <p><input type="password" style="width: 223px; padding: 10px;" name="password" placeholder="password" id="password" class="forminputtext" ></p> <p><a onclick="document.getElementById('loginform').submit();" class="btn green small" style="color: #fff; text-decoration: none;">Login</a></p> </form></div></div> 
+
+<script>
+$('#loginform').keydown(function(e) {
+    if (e.keyCode != 13)
+        return;
+    $(this).submit();
+}); 
+</script>
+
+
+</div>
+
+ <div id="socialmenubuttons"><a id="buttontwitter" href="http://twitter.com/tutorhunt/"><span class="buttext">Tutor Hunt on twitter</span></a> <a id="buttonfacebook" href="http://www.facebook.com/tutorhunt/"><span class="buttext">Tutor Hunt on facebook</span></a> </div><div id="toplinks"><span class="mobno"><img src="https://www.tutorhunt.com/images/icon-home-phone.png" style="position: relative; top: 2px;"> <a href="tel:+442031510012">0203 151 0012</a> &nbsp;&nbsp;&nbsp; <a href="https://www.tutorhunt.com/about.asp">About</a> &nbsp;&nbsp;&nbsp;</span><a href="https://www.tutorhunt.com/login.asp">Login</a> </div>
+    </div>
+
+    <div id="menublock">
+      
+
+
+	<div id="menublockmain">
+	
+     <nav id="menu" >
+	 
+	  
+	  
+	 
+	
+			<ul>
+			
+   <li class="mobyes homebutton menuitem"></li>
+			
+<li class="homebutton menuitem"><a href="https://www.tutorhunt.com/"><span id="memicon-home"></span>Home</a></li> <li class="otherbutton menuitem" ><a href="https://www.tutorhunt.com/tutor-search.asp" ><span id="memicon-foundme"></span>Search</a></li>
+	   <li class="otherbutton menuitem mobyes"><a href="https://www.tutorhunt.com/login.asp" ><span id="memicon-login"></span>
+Log In </a></li>
+	  	    
+ 	  <li class="otherbutton menuitemex menu-students"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth120"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+For Students </a></span>
+
+	 <div class="menu-students-sub">
+	
+     <ul >
+<span id="formattutormenu1"><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Services</a>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/tutor-search.asp">Find a Tutor</a></li>		 <li class="submenuitem"><a href="https://www.tutorhunt.com/about.asp">How Our Service Works</a></li>		 <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects.asp">Browse All Subjects</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/resource/">Academic Resources</a></li>	 	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/questions/">Ask an Academic Question</a></li>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/locations/county/">Tutors By County</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/locations/london.asp">Tutors in London</a></li> 	 	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/online-tuition/">Online Tuition</a></li>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/lessons/">Group Lessons</a></li>		 </span> 
+
+       <li class="submenuitem" ><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="formattutormenu2title">
+Subjects Categories </a></span>
+   <ul >
+ 
+<span id="formattutormenu2"> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/academic/">Academic</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/languages/">Languages</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/musical-instruments/">Musical Instruments</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/arts/">Arts</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/health-fitness/">Health and Fitness</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/it/">IT</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/professional/">Professional</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/all-subjects/lifestyle/">Lifestyle</a></li>	 </span>	    
+     </ul>
+	
+ </li>
+
+
+	
+    <li class="submenuitem"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="formattutormenu3title">
+Popular Subjects </a></span>
+
+	<ul >
+
+
+	
+<span id="formattutormenu3">
+<li class="submenuitem"><a href="https://www.tutorhunt.com/maths.asp">Maths</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/english.asp">English</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/biology.asp">Biology</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/chemistry.asp">Chemistry</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/physics.asp">Physics</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/general-science.asp">General Science</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/french.asp">French</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/german.asp">German</a></li><li class="submenuitem"><a href="https://www.tutorhunt.com/spanish.asp">Spanish</a></li>
+</span>
+</ul>
+</li>
+</ul>
+</div>
+ </li> 	 
+	  <li class="otherbutton menuitemex menu-tutors"><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth120"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+For Tutors </a></span>
+
+     	 <div class="menu-tutors-sub">
+
+  <ul ><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Services</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/tutor-search.asp?type=student">Search for Students</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/jobs/locations/county/">Tuition Jobs By County</a></li> <li class="submenuitem"><a href="https://www.tutorhunt.com/jobs/locations/london.asp">Tuition Jobs in London</a></li>	 <li class="submenuitem" ><a href="https://www.tutorhunt.com/jobs/">Tuition Jobs By Subject</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/signup.asp?type=tutor">Register</a></li>	 </ul> 
+
+</div>
+
+  <li class="otherbutton menuitemex menu-tutors" ><span class="fullmenuwidth"><a href="https://www.tutorhunt.com/#" class="menuwidth111"><img src="https://www.tutorhunt.com/images/menu-arrowdown.png" alt="" style="z-index:1000;" class="mobno" /> <span class="memicon-more"></span>
+Resources </a></span>
+
+     	 <div class="menu-tutors-sub">
+
+ <ul ><li class="mobno" ><a href="https://www.tutorhunt.com/#" class="formattutormenu1title">Our Resources</a>	 <li class="submenuitem"><a href="https://www.tutorhunt.com/blog/">Blog</a><li class="submenuitem"><a href="https://www.tutorhunt.com/research/">Research</a><li class="submenuitem"><a href="https://www.tutorhunt.com/foundation/">Foundation</a><li class="submenuitem"><a href="https://www.tutorhunt.com/resource/">Tutor Resources</a><li class="submenuitem"><a href="https://www.tutorhunt.com/questions/">Academic Questions</a><li class="submenuitem" ><a href="https://www.tutorhunt.com/schools/directory/primary/">Primary School Guide</a></li> <li class="submenuitem" ><a href="https://www.tutorhunt.com/schools/directory/secondary/">Secondary School Guide</a></li></ul> 
+
+</div>
+       
+
+<li class="otherbutton menuitem menu-contact"><a class="menuwidth100" href="https://www.tutorhunt.com/contact.asp"><span id="memicon-mail"></span>Contact us</a></li> <li class="otherbutton menuitem mobyes"><a href="https://www.tutorhunt.com/signup.asp" > <span id="memicon-register"></span>Register</a></li>
+	  </ul>
+	  
+      <div id="signupmenubutton" class="mobno">
+<a href="https://www.tutorhunt.com/signup.asp" class="btn green small nobuttonshadow"  style="font-size: 14px; font-weight: normal; padding-left: 15px; padding-right: 15px;">Register</a>
+</div>
+
+			</nav>
+    </div>
+    </div>
+	
+	
+	<div id="contentheader">
+	    
+		<div id="contentheadertext">
+				<p id="location"><a href="https://www.tutorhunt.com/"> Tutor Hunt</a></p>
+				<h1>SIGN UP FOR TUTOR HUNT</h1>
+
+<p>Please fill out our short form below to complete the registration process.</p>	
+		</div>
+	</div>
+	
+	
+	
+	
+	
+
+    <div id="maincontentbg">
+    <div id="maincontent">
+			<div id="tabbox">
+				<div class="tabitem tableftselected"><img src="https://www.tutorhunt.com/images/icon-account-selected.png" alt="" >
+01. ACCOUNT INFO<span class="tabno mobno">RMATION</span> </div>
+				<div class="tabitem tabnoneselected mobno"><img src="https://www.tutorhunt.com/images/icon-user-2.png" alt="" >
+02. PERSONAL INFO<span class="tabno mobno">RMATION</span> </div>
+				<div class="tabitem tablast mobno"><img src="https://www.tutorhunt.com/images/icon-profile.png" alt="">
+03. PROFILE INFO<span class="tabno mobno">RMATION</span> </div>
+			
+				
+
+
+
+
+
+
+       
+
+
+
+  <form method="post" action="https://www.tutorhunt.com/create-user-account.asp" id="signupform">
+
+
+
+
+<input type="hidden" name="iop" value="839601877" />
+    <table class="forminputtable">
+      <tr>
+	     <td colspan="2">
+Account Type
+		<select name="accounttype" id="accounttype" class="formdropdownpad">
+		<option value="none" selected="selected" >Select</option><option value="tutor">I'm a Tutor</option><option value="student">I'm a Student</option><option value="parent">I'm a Parent</option>
+		</select>	
+		</td>
+      </tr>
+      <tr>
+	    <td>
+Username <input class="forminputtextpad" type="text"  id="newusername" name="newusername"  maxlength="25" /></td>
+        <td>
+Email Address <input class="forminputtextpad" type="text" id="email" name="email"  maxlength="90" /></td> 
+      </tr>
+      <tr>
+
+        <td>
+Password <input class="forminputtextpad" type="password" id="newpassword"  name="newpassword"  size="23" maxlength="30" /></td>
+        <td>
+Confirm Password <input class="forminputtextpad" type="password" id="password2"  name="password2"   maxlength="30" /></td>
+      </tr>
+
+
+
+    <tr>
+      <td colspan="2">
+<label class="checkcontainer">I agree to Tutor Hunt's <a href="https://www.tutorhunt.com/tos-content.asp" rel="nofollow" target="_blank">Terms & Conditions</a> and  <a href="https://www.tutorhunt.com/privacy-policy.asp" rel="nofollow" target="_blank">Privacy Policy</a><input type="checkbox" name="tos" id="tos" ><span class="checkmark"></span></label> </td>
+    </tr>
+	 <tr>
+      <td colspan="2"><a onclick="validate(signupform);" class="btn green small">
+Continue </a></td>
+    </tr>
+    </table>
+  </form>
+</div>
+
+
+
+ 
+	</div>	
+
+		<div id="footerblock">
+      <div id="footercontent">
+<div id="footertext">&copy; <strong>2005-2019 <a href="https://www.tutorhunt.com/"> Tutor Hunt</a>  - All Rights Reserved</strong><br /><br />
+<a rel="nofollow" href="https://www.tutorhunt.com/privacy-policy.asp">Privacy Policy</a> | <a rel="nofollow" href="https://www.tutorhunt.com/copyright.asp">Copyright</a> | <a rel="nofollow" href="https://www.tutorhunt.com/tos.asp">Terms of Service</a><div id="footerloadtime">loaded in 0.016 seconds </div></div>
+
+
+
+<div id="footersocial"><a href="http://twitter.com/tutorhunt/"><img src="https://www.tutorhunt.com/images/footer-twitter-icon.png" alt="twitter"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.facebook.com/tutorhunt/"><img src="https://www.tutorhunt.com/images/footer-facebook-icon.png" alt="facebook"></a></div> 
+</div>
+
+    </div>
+</div> 
+
+  </body>
+
+</html>
